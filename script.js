@@ -113,11 +113,4 @@ window.onclick = function(event) {
 }
 
 
-$(document).ready(() => {
-	$('.buttonFive').on('mouseenter', (event) => {
-		$(event.currentTarget).addClass('buttonFiveAnimation');
-	}).on('mouseleave', (event) => {
-		$(event.currentTarget).removeClass('buttonFiveAnimation');
-	});
-});
 
