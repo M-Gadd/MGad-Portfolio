@@ -124,7 +124,7 @@ body {
 }
 
 /* Modal Content/Box */
-.modal-content {  
+.modal-content {
   background-color: #0A2129;
   /* background-color: #fefefe; */
   margin: 15% auto; /* 15% from the top and centered */
@@ -202,6 +202,11 @@ body {
   color: #0AE0DF;
   cursor: pointer;
 }
+#myBtn5:hover,
+#myBtn5:focus{
+  color: #0AE0DF;
+  cursor: pointer;
+}
 
 
 
@@ -214,16 +219,31 @@ body {
   text-align: center;
   margin: 10px 20px;
 }
-.wrapper{
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-around;
-}
+
+/* div.card{
+  width: 400px;
+} */
 
 .wrapper .card{
   /* width: 400px; */
-  height: 380px;
+  height: 400px;
 }
+
+.wrapper{
+  overflow: scroll;
+  display: flex;
+   /* align-items: flex-start; */
+  justify-content: space-between; 
+}
+
+.card .container{
+  width: 250px
+}
+
+
+
+
+
 /* Add rounded corners to the top left and the top right corner of the image */
 .card img {
   border-radius: 5px 5px 0 0;
@@ -232,6 +252,9 @@ body {
 .card a{
   color: white;
   text-decoration-line: none;
+  position: relative;
+  bottom: 0;
+
 }
 
 .card a:hover,
@@ -261,9 +284,9 @@ body {
   cursor: pointer;
 }
 
-.fa-linkedin-in{
+/* .fa-linkedin-in{ */
   /* color: #0AE0DF; */
-}
+/* } */
 
 .foot a{
   color: white;
@@ -301,6 +324,11 @@ body {
   display: flex;
   justify-content: space-around;
   align-items: flex-start;
+  /* border-bottom: 4px solid black; */
+  /* box-sizing: border-box; */
+  display: none;
+
+
 }
 
 .location{
@@ -328,3 +356,83 @@ body {
   padding: 15px 30px;
   /* border-radius: 100px; */
   font-size: 16px; }
+
+  /* .hrLine{
+    height: 5px;
+    background-color: black;
+  }
+
+  .firstCir{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 2px solid white;
+  }
+
+  .allCir{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  } */
+
+  /* .timeLine {
+    height: 400px;
+    width: 800px;
+    margin: 0 auto;
+    border-bottom: 4px solid black;
+    display: flex;
+    justify-content: space-around;
+    box-sizing: border-box; */
+    /* background: red; */
+  /* } */
+  
+  .circles {
+    border: 4px solid black;
+    width: 60px;
+    height: 60px;
+    box-sizing: border-box;
+    border-radius: 60px;
+    /* background: grey; */
+    background: -webkit-radial-gradient(center, ellipse cover, #f7f7f7 0%, #bababa 100%);
+    background: -webkit-radial-gradient(center, ellipse, #666 20%, #333 100%);
+    background: -o-radial-gradient(center, ellipse, #666 20%, #333 100%);
+    background: radial-gradient(ellipse at center, #666 20%, #333 100%);
+    /* position: relative;
+    top: 370px; */
+    
+  }
+
+  .circles:hover,
+  .circles:focus{
+    cursor: pointer;
+    background: -webkit-radial-gradient(center, ellipse cover, #f7f7f7 0%, #bababa 100%);
+    background: -webkit-radial-gradient(center, ellipse, #666 20%, #333 100%);
+    background: -o-radial-gradient(center, ellipse, #666 20%, #333 100%);
+    background: radial-gradient(ellipse at center, #fff 20%, #333 80%);
+  }
+
+  .twoDivs{
+    position: relative;
+    top: 370px;
+    text-align: center;
+  }
+
+  .hide{
+    display: none;
+  }
+
+  .divCirc{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around; 
+    margin-top: 4%;
+  }
+
+  .activeBut{
+    background: radial-gradient(ellipse at center, #fff 20%, #333 80%);
+  }
+
+  .activeWork{
+    display: flex;
+  }
+

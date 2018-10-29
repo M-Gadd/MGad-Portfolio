@@ -1,3 +1,5 @@
+
+//About Me
 // Get the modal
 var modal = document.getElementById('myModal');
 
@@ -25,9 +27,12 @@ window.onclick = function(event) {
 }
 
 
+
+
 // -----------------------------------------------
 
 
+// portfolio and websites
 // Get the modal
 var modal2 = document.getElementById('myModal2');
 
@@ -59,7 +64,7 @@ window.onclick = function(event) {
 
 // ---------------------------------------------------------
 
-
+//Contact Me
 var modal3 = document.getElementById('myModal3');
 
 // Get the button that opens the modal
@@ -87,6 +92,7 @@ window.onclick = function(event) {
 
 // ---------------------------------------------------------
 
+//Working Experience 
 var modal4 = document.getElementById('myModal4');
 
 // Get the button that opens the modal
@@ -113,4 +119,77 @@ window.onclick = function(event) {
 }
 
 
+//----------------------------------------------------------
+
+var btn5 = document.getElementById("myBtn5");
+btn5.onclick = function() {
+    window.location.href = './images/MGad_CV.pdf'
+}
+
+//-----------------------------------------------------------
+
+// for my working experience timeline/carousel
+var workArr  = document.querySelectorAll('.work');
+var buttonArr = document.querySelectorAll('.circles');
+var activeID;
+var activeWork;
+var bool = true;
+var i = 0
+
+buttonArr.forEach(one => {
+  one.onclick = function(){
+    bool = false;
+    buttonArr.forEach(one => {
+      one.classList.remove('activeBut');
+    });
+    one.classList.add('activeBut')
+    activeID = one.getAttribute('id')[one.getAttribute('id').length-1];
+    workArr.forEach(one=>{
+      one.classList.remove('activeWork')
+      one.getAttribute('id')[one.getAttribute('id').length-1] === activeID ? activeWork = one: activeWork = activeWork;
+    })
+    activeWork.classList.add('activeWork')
+    setTimeout(() => {
+      bool = true;
+    }, 20*1000);
+  }
+});
+
+setInterval(() => {
+  if (bool) {
+
+    buttonArr.forEach(one => {
+      one.classList.remove('activeBut');
+    });
+    
+    workArr.forEach(one=>{
+      one.classList.remove('activeWork')
+    });
+    
+    workArr[i].classList.add('activeWork');
+    buttonArr[i].classList.add('activeBut')
+    
+    if (i===workArr.length-1) {
+      i = 0
+    } else {
+      i++;
+    }
+  }
+}, 1000*10);
+
+
+
+//--------------------------------------------------------
+
+// To open images directly from the card  
+var images = document.querySelectorAll('img');
+
+images.forEach(one => {
+    one.onclick = () => {
+        // var newModal = document.create('div')
+        var img = one.getAttribute('src')
+        // one.src= "./images/_MG_6015_copy-2.jpg";
+        window.location.href = img;
+    }
+})
 
